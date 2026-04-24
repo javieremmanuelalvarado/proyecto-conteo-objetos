@@ -3,7 +3,7 @@
 
 Proyecto desarrollado en Python para la segmentación, análisis y conteo de objetos en imágenes utilizando técnicas fundamentales implementadas manualmente.
 
----
+
 
 ## 📌 Descripción
 
@@ -22,7 +22,7 @@ Este proyecto implementa un pipeline completo de procesamiento de imágenes que 
 
 El enfoque principal es **no depender de funciones automáticas**, sino implementar los algoritmos desde cero para entender su funcionamiento.
 
----
+
 
 ## 🛠️ Tecnologías utilizadas
 
@@ -31,7 +31,7 @@ El enfoque principal es **no depender de funciones automáticas**, sino implemen
 - Matplotlib  
 - OpenCV (uso mínimo)
 
----
+
 
 ## 📂 Estructura del proyecto
 proyecto-conteo-objetos/
@@ -54,10 +54,11 @@ proyecto-conteo-objetos/
 └── README.md
 
 2. Instalar dependencias
-  pip install -r requirements.txt
+pip install -r requirements.txt
 
 3. Ejecutar el ejemplo
-   python ejemplos/demo.py
+python ejemplos/demo.py
+
 🧪 Resultados
 
 El sistema permite:
