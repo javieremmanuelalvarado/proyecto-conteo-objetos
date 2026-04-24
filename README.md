@@ -1,4 +1,4 @@
-\- Conteo de Objetos en Imágenes  
+\- Conteo de Objetos en Imágenes
 
 \-Procesamiento de Imágenes Biomédicas
 
@@ -20,25 +20,25 @@ Este proyecto implementa un pipeline completo de procesamiento de imágenes que 
 
 
 
-\- Conversión de RGB a escala de grises  
+\- Conversión de RGB a escala de grises
 
-\- Filtrado espacial (convolución manual)  
+\- Filtrado espacial (convolución manual)
 
-\- Transformaciones de intensidad (negativo)  
+\- Transformaciones de intensidad (negativo)
 
-\- Detección de bordes (Sobel)  
+\- Detección de bordes (Sobel)
 
-\- Umbralización  
+\- Umbralización
 
-\- Segmentación por componentes conectados  
+\- Segmentación por componentes conectados
 
-\- Eliminación de objetos pequeños (ruido)  
+\- Eliminación de objetos pequeños (ruido)
 
-\- Cálculo de propiedades de objetos (área, centroides)  
+\- Cálculo de propiedades de objetos (área, centroides)
 
-\- Detección de esquinas (Harris)  
+\- Detección de esquinas (Harris)
 
-\- Conteo final de objetos  
+\- Conteo final de objetos
 
 
 
@@ -54,11 +54,11 @@ El enfoque principal es \*\*no depender de funciones automáticas\*\*, sino impl
 
 
 
-\- Python  
+\- Python
 
-\- NumPy  
+\- NumPy
 
-\- Matplotlib  
+\- Matplotlib
 
 \- OpenCV (uso mínimo)
 
@@ -79,10 +79,6 @@ proyecto-conteo-objetos/
 │ ├── preprocesamiento.py
 
 │ ├── segmentacion.py
-
-│ ├── caracteristicas.py
-
-│ ├── pipeline.py
 
 │ └── init.py
 
@@ -179,5 +175,4 @@ Esquinas detectadas
 &#x20;Licencia
 
 Proyecto de uso académico.
-
 
