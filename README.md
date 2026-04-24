@@ -1,11 +1,11 @@
-# 🧠 Conteo de Objetos en Imágenes  
-### Procesamiento de Imágenes Biomédicas
+-🧠 Conteo de Objetos en Imágenes  
+-Procesamiento de Imágenes Biomédicas
 
 Proyecto desarrollado en Python para la segmentación, análisis y conteo de objetos en imágenes utilizando técnicas fundamentales implementadas manualmente.
 
 
 
-## 📌 Descripción
+##  Descripción
 
 Este proyecto implementa un pipeline completo de procesamiento de imágenes que incluye:
 
@@ -24,7 +24,7 @@ El enfoque principal es **no depender de funciones automáticas**, sino implemen
 
 
 
-## 🛠️ Tecnologías utilizadas
+##  Tecnologías utilizadas
 
 - Python  
 - NumPy  
@@ -54,12 +54,13 @@ proyecto-conteo-objetos/
 └── README.md
 
 2. Instalar dependencias
-pip install -r requirements.txt
+-pip install -r requirements.txt
 
 3. Ejecutar el ejemplo
-python ejemplos/demo.py
+-python ejemplos/demo.py
 
-🧪 Resultados
+## Resultados
+
 
 El sistema permite:
 
@@ -79,12 +80,12 @@ Objetos etiquetados
 Centroides
 Esquinas detectadas
 
-👨‍💻 Autor
-ALVARADO ESPARZA JAVIER EMMANUEL
-FELIX PEREIDA ANDREA
-ORTIZ MACIAS ATZHYRI GUADALUPE
-VAZQUEZ MARTINEZ CESAR GIOVANNI
-Ingeniería Biomédica – Universidad Autónoma de Aguascalientes
+ Autor
+-ALVARADO ESPARZA JAVIER EMMANUEL
+-FELIX PEREIDA ANDREA
+-ORTIZ MACIAS ATZHYRI GUADALUPE
+-VAZQUEZ MARTINEZ CESAR GIOVANNI
+-Ingeniería Biomédica – Universidad Autónoma de Aguascalientes
 
-📄 Licencia
+ Licencia
 Proyecto de uso académico.
