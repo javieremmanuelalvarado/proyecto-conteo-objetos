@@ -181,4 +181,3 @@ Esquinas detectadas
 Proyecto de uso académico.
 
 
-
