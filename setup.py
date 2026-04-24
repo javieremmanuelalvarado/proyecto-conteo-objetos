@@ -16,6 +16,6 @@ setup(
         "matplotlib",
         "opencv-python"
     ],
-    author="Javier Emmanuel Alvarado",
+    author="-ALVARADO ESPARZA JAVIER EMMANUEL-FELIX PEREIDA ANDREA-ORTIZ MACIAS ATZHYRI GUADALUPE-VAZQUEZ MARTINEZ CESAR GIOVANNI",
     description="Librería para segmentación y conteo de objetos en imágenes",
 )
