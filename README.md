@@ -72,47 +72,81 @@ El enfoque principal es \*\*no depender de funciones automáticas\*\*, sino impl
 
 proyecto-conteo-objetos/
 
-│
+&#x20;contador\_objetos/
 
-├── contador\_objetos/
+&#x09;preprocesamiento.py
 
-│ ├── preprocesamiento.py
+&#x09;segmentacion.py 
 
-│ ├── segmentacion.py
-
-│ └── init.py
-
-│
-
-├── ejemplos/
-
-│ └── demo.py
-
-│
-
-├── imagenes\_prueba/
-
-│ └── (imágenes de prueba)
-
-│
-
-├── requirements.txt
-
-├── setup.py
-
-└── README.md
+&#x09;init.py
 
 
 
-2\. Instalar dependencias
+&#x20;ejemplos/
 
-\-pip install -r requirements.txt
+&#x09;demo.py
 
 
 
-3\. Ejecutar el ejemplo
+&#x20;imagenes\_prueba/
+
+&#x09;(imágenes de prueba)
+
+
+
+&#x20;requirements.txt
+
+&#x20;setup.py
+
+&#x20;README.md
+
+
+
+\##  Cómo usar el proyecto
+
+
+
+\### 1. Clonar el repositorio
+
+
+
+git clone https://github.com/javieremmanuelalvarado/proyecto-conteo-objetos.git
+
+cd proyecto-conteo-objetos
+
+
+
+\### 2. Instalar dependencias
+
+pip install -r requirements.txt
+
+
+
+\### 3. Instalar el proyecto como librería
+
+pip install -e .
+
+
+
+\### 4. Ejecutar el ejemplo
 
 \-python ejemplos/demo.py
+
+
+
+\### 5. Usarlo en otro script
+
+Después de instalarlo, puedes importar funciones así:
+
+from contador\_objetos.preprocesamiento import convertirBGR\_a\_grises
+
+
+
+\### 6. Actualizar el proyecto
+
+Si hay cambios nuevos en el repositorio:
+
+git pull origin main
 
 
 
