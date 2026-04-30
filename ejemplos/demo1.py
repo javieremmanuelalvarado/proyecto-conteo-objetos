@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Wed Apr 22 22:34:10 2026
+Created on Fri Apr 24 23:46:23 2026
 
 @author: emman
 """
+
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -29,7 +30,7 @@ from contador_objetos.segmentacion import (
     calcular_propiedades
 )
 
-ruta = "imagenes_prueba/ejemplo_7.jpg"
+ruta = "imagenes_prueba/ejemplo_11.jpg"
 
 # -----------------------------
 # Lectura y preprocesamiento
@@ -62,11 +63,11 @@ bordes = calcular_magnitud_gradiente(gradiente_x, gradiente_y)
 # -----------------------------
 # Umbralización
 # -----------------------------
-umbral = 65
+umbral = 120
 imagen_binaria = umbralizar_imagen(imagen_suavizada, umbral)
 
 # Si alguna vez los objetos quedan negros y el fondo blanco, descomenta esto:
-# imagen_binaria = 255 - imagen_binaria
+imagen_binaria = 255 - imagen_binaria
 
 # -----------------------------
 # Segmentación y conteo

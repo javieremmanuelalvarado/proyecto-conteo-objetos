@@ -76,7 +76,7 @@ proyecto-conteo-objetos/
 
 &#x09;preprocesamiento.py
 
-&#x09;segmentacion.py 
+&#x09;segmentacion.py
 
 &#x09;init.py
 
@@ -152,7 +152,7 @@ git pull origin main
 
 \## Resultados
 
-
+!\[Resultado del algoritmo](imagenes\_readme/ejemploReadme.png)
 
 
 
