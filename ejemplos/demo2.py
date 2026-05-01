@@ -34,9 +34,8 @@ from contador_objetos.segmentacion import (
 
 ruta = "imagenes_prueba/ejemplo_15.jpg"
 
-# -----------------------------
+
 # Lectura y preprocesamiento
-# -----------------------------
 imagen = leer_imagen(ruta)
 imagen_gris = convertirBGR_a_grises(imagen)
 imagen_negativa = transformacion_negativa(imagen_gris)
@@ -51,9 +50,8 @@ esquinas = detectar_esquinas_harris(respuesta_harris, umbral_relativo=0.05)
 
 print("Número de esquinas detectadas:", len(esquinas))
 
-# -----------------------------
+
 # Detección de bordes con Sobel
-# -----------------------------
 sobel_x = kernel_sobel_x()
 sobel_y = kernel_sobel_y()
 
@@ -62,18 +60,16 @@ gradiente_y = aplicar_convolucion(imagen_suavizada, sobel_y, aplicar_clip=False)
 
 bordes = calcular_magnitud_gradiente(gradiente_x, gradiente_y)
 
-# -----------------------------
+
 # Umbralización
-# -----------------------------
 umbral = 65
 imagen_binaria = umbralizar_imagen(imagen_suavizada, umbral)
 
 # Si alguna vez los objetos quedan negros y el fondo blanco, descomenta esto:
 #imagen_binaria = 255 - imagen_binaria
 
-# -----------------------------
+
 # Segmentación y conteo
-# -----------------------------
 etiquetas, numero_objetos = etiquetar_componentes_conectados(imagen_binaria)
 
 # Filtrado de objetos pequeños
@@ -83,9 +79,8 @@ etiquetas_filtradas, numero_objetos_filtrados = eliminar_objetos_pequenos(etique
 # Propiedades de cada objeto
 propiedades = calcular_propiedades(etiquetas_filtradas)
 
-# -----------------------------
 # Resultados en consola
-# -----------------------------
+
 print("Número de objetos detectados antes del filtrado:", numero_objetos)
 print("Número de objetos detectados después del filtrado:", numero_objetos_filtrados)
 print()
@@ -97,9 +92,8 @@ for obj in propiedades:
     print(f"  Caja = {obj['caja']}")
     print()
 
-# -----------------------------
+
 # Visualización
-# -----------------------------
 plt.figure(figsize=(18, 12))
 
 plt.subplot(3, 4, 1)

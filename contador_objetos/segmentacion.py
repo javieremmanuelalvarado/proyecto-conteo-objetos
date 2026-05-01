@@ -32,6 +32,64 @@ def umbralizar_imagen(imagen, umbral):
     return binaria
 
 
+def calcular_umbral_otsu(imagen):
+    """
+    Calcula automáticamente el umbral óptimo usando el método de Otsu.
+
+    Parámetro:
+    - imagen: imagen en escala de grises
+
+    Devuelve:
+    - mejor_umbral: valor de umbral calculado
+    """
+
+    histograma = np.zeros(256)
+    alto, ancho = imagen.shape
+
+    # Calcular histograma manualmente
+    for i in range(alto):
+        for j in range(ancho):
+            intensidad = int(imagen[i, j])
+            histograma[intensidad] += 1
+
+    total_pixeles = alto * ancho
+    histograma = histograma / total_pixeles
+
+    media_total = 0
+    for i in range(256):
+        media_total += i * histograma[i]
+
+    peso_fondo = 0
+    media_fondo = 0
+
+    mejor_umbral = 0
+    maxima_varianza = 0
+
+    for t in range(256):
+        peso_fondo += histograma[t]
+
+        if peso_fondo == 0:
+            continue
+
+        peso_objeto = 1 - peso_fondo
+
+        if peso_objeto == 0:
+            break
+
+        media_fondo += t * histograma[t]
+
+        media_f = media_fondo / peso_fondo
+        media_o = (media_total - media_fondo) / peso_objeto
+
+        varianza_entre_clases = peso_fondo * peso_objeto * (media_f - media_o) ** 2
+
+        if varianza_entre_clases > maxima_varianza:
+            maxima_varianza = varianza_entre_clases
+            mejor_umbral = t
+
+    return mejor_umbral
+
+
 def obtener_vecinos(i, j, alto, ancho):
     """
     Devuelve los vecinos válidos de un pixel usando conectividad de 8.
