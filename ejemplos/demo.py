@@ -33,12 +33,12 @@ from contador_objetos.segmentacion import (
 
 # CONFIGURACIÓN GENERAL
 
-ruta = "imagenes_prueba/ejemplo_1.jpeg"
+ruta = "imagenes_prueba/ejemplo_15.jpg"
 
 #Umbral automatico con otsu
 #umbral_manual = 65
 
-min_area = 5700           # Área mínima para conservar objetos
+min_area = 50           # Área mínima para conservar objetos
 umbral_harris = 0.05    # Sensibilidad para detección de esquinas
 
 
@@ -87,7 +87,7 @@ print("Umbral automático Otsu:", umbral)
 imagen_binaria = umbralizar_imagen(imagen_suavizada, umbral)
 
 # Si en alguna imagen los objetos quedan negros y el fondo blanco, se puede invertir:
-imagen_binaria = 255 - imagen_binaria
+#imagen_binaria = transformacion_negativa(imagen_binaria)
 
 
 # SEGMENTACIÓN Y CONTEO
@@ -127,7 +127,7 @@ harris_visual = (harris_visual * 255).astype(np.uint8)
 
 
 
-# RESULTADOS EN CONSOLA
+# RESULTADOS
 
 print("Número de objetos detectados antes del filtrado:", numero_objetos)
 print("Número de objetos detectados después del filtrado:", numero_objetos_filtrados)
